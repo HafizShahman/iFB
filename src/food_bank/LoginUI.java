@@ -5,6 +5,8 @@
  */
 package food_bank;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author User
@@ -30,10 +32,10 @@ public class LoginUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         lblUname = new javax.swing.JLabel();
+        btn_login = new javax.swing.JLabel();
         lblPword = new javax.swing.JLabel();
         txtPword = new javax.swing.JPasswordField();
         txtUname = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -54,6 +56,15 @@ public class LoginUI extends javax.swing.JFrame {
         jPanel1.add(lblUname);
         lblUname.setBounds(63, 211, 38, 38);
 
+        btn_login.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login-btn.png"))); // NOI18N
+        btn_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_loginMouseClicked(evt);
+            }
+        });
+        jPanel1.add(btn_login);
+        btn_login.setBounds(80, 390, 260, 50);
+
         lblPword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pwd-img.png"))); // NOI18N
         jPanel1.add(lblPword);
         lblPword.setBounds(63, 284, 38, 38);
@@ -67,11 +78,6 @@ public class LoginUI extends javax.swing.JFrame {
         jPanel1.add(txtUname);
         txtUname.setBounds(149, 211, 200, 38);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login-btn.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(63, 366, 286, 62);
-
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg-img.png"))); // NOI18N
         jPanel1.add(jLabel1);
         jLabel1.setBounds(-90, 60, 770, 630);
@@ -81,6 +87,21 @@ public class LoginUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_loginMouseClicked
+        // TODO add your handling code here:
+        String un = txtUname.getText();
+        String pw = String.valueOf(txtPword.getPassword());
+        
+        if (un == null){
+            JOptionPane.showMessageDialog(rootPane, "Username is empty");
+        }else if (pw == null){
+            JOptionPane.showMessageDialog(rootPane, "Password is empty");
+        }else if ("shahman".equals(un) && "admin".equals(pw)) {
+            dispose();
+            new MainMenuUI().setVisible(true);
+        }
+    }//GEN-LAST:event_btn_loginMouseClicked
 
     /**
      * @param args the command line arguments
@@ -118,7 +139,7 @@ public class LoginUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel btn_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
