@@ -27,19 +27,57 @@ public class LoginUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(800, 600));
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        lblUname = new javax.swing.JLabel();
+        lblPword = new javax.swing.JLabel();
+        txtPword = new javax.swing.JPasswordField();
+        txtUname = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("iFoodBank");
+        setBackground(new java.awt.Color(47, 62, 119));
+        setForeground(new java.awt.Color(47, 62, 119));
+        setMinimumSize(new java.awt.Dimension(400, 500));
+        getContentPane().setLayout(null);
+
+        jPanel1.setBackground(new java.awt.Color(47, 62, 119));
+        jPanel1.setLayout(null);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(150, 50, 130, 140);
+
+        lblUname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/un-img.png"))); // NOI18N
+        jPanel1.add(lblUname);
+        lblUname.setBounds(63, 211, 38, 38);
+
+        lblPword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pwd-img.png"))); // NOI18N
+        jPanel1.add(lblPword);
+        lblPword.setBounds(63, 284, 38, 38);
+
+        txtPword.setText("jPasswordField1");
+        jPanel1.add(txtPword);
+        txtPword.setBounds(149, 284, 200, 38);
+
+        txtUname.setText("Username");
+        txtUname.setFocusTraversalPolicyProvider(true);
+        jPanel1.add(txtUname);
+        txtUname.setBounds(149, 211, 200, 38);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login-btn.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jPanel1.add(jButton1);
+        jButton1.setBounds(63, 366, 286, 62);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg-img.png"))); // NOI18N
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(-90, 60, 770, 630);
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(-10, -10, 440, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,5 +118,13 @@ public class LoginUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblPword;
+    private javax.swing.JLabel lblUname;
+    private javax.swing.JPasswordField txtPword;
+    private javax.swing.JTextField txtUname;
     // End of variables declaration//GEN-END:variables
 }
