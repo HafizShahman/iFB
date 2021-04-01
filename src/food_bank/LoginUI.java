@@ -59,11 +59,6 @@ public class LoginUI extends javax.swing.JFrame {
         lblPword.setBounds(63, 284, 38, 38);
 
         txtPword.setText("jPasswordField1");
-        txtPword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPwordActionPerformed(evt);
-            }
-        });
         jPanel1.add(txtPword);
         txtPword.setBounds(149, 284, 200, 38);
 
@@ -75,7 +70,7 @@ public class LoginUI extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login-btn.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jPanel1.add(jButton1);
-        jButton1.setBounds(63, 366, 289, 55);
+        jButton1.setBounds(63, 366, 286, 62);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg-img.png"))); // NOI18N
         jPanel1.add(jLabel1);
@@ -86,10 +81,6 @@ public class LoginUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtPwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPwordActionPerformed
 
     /**
      * @param args the command line arguments
