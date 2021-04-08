@@ -27,141 +27,136 @@ public class MainMenuUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelDistribution = new javax.swing.JPanel();
-        btnDistribution = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        panelStock = new javax.swing.JPanel();
-        btnStockStatus = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         panelRecordStock = new javax.swing.JPanel();
-        btnRecordStock = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnStock = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnDist = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        btnDRecord = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
-        setBackground(new java.awt.Color(255, 153, 153));
-        setMinimumSize(new java.awt.Dimension(800, 600));
+        setBackground(new java.awt.Color(63, 101, 145));
+        setMinimumSize(new java.awt.Dimension(1366, 768));
         setName("Menu"); // NOI18N
-
-        panelDistribution.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        btnDistribution.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        btnDistribution.setText("Distribution");
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/distributed.png"))); // NOI18N
-
-        javax.swing.GroupLayout panelDistributionLayout = new javax.swing.GroupLayout(panelDistribution);
-        panelDistribution.setLayout(panelDistributionLayout);
-        panelDistributionLayout.setHorizontalGroup(
-            panelDistributionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDistributionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnDistribution, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-            .addGroup(panelDistributionLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel2)
-                .addContainerGap(70, Short.MAX_VALUE))
-        );
-        panelDistributionLayout.setVerticalGroup(
-            panelDistributionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelDistributionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(50, 50, 50)
-                .addComponent(btnDistribution, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
-        );
-
-        panelStock.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        btnStockStatus.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        btnStockStatus.setText("Stock Status");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inventory.png"))); // NOI18N
-
-        javax.swing.GroupLayout panelStockLayout = new javax.swing.GroupLayout(panelStock);
-        panelStock.setLayout(panelStockLayout);
-        panelStockLayout.setHorizontalGroup(
-            panelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelStockLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnStockStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-            .addGroup(panelStockLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel3)
-                .addContainerGap(70, Short.MAX_VALUE))
-        );
-        panelStockLayout.setVerticalGroup(
-            panelStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelStockLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(50, 50, 50)
-                .addComponent(btnStockStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
-        );
+        getContentPane().setLayout(null);
 
         panelRecordStock.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btnRecordStock.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        btnRecordStock.setText("Record Stock");
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/update.png"))); // NOI18N
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnStock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnStock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/stock.png"))); // NOI18N
+        btnStock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnStockMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelRecordStockLayout = new javax.swing.GroupLayout(panelRecordStock);
         panelRecordStock.setLayout(panelRecordStockLayout);
         panelRecordStockLayout.setHorizontalGroup(
             panelRecordStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRecordStockLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRecordStock, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42))
-            .addGroup(panelRecordStockLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1)
-                .addContainerGap(70, Short.MAX_VALUE))
+            .addComponent(btnStock, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
         );
         panelRecordStockLayout.setVerticalGroup(
             panelRecordStockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRecordStockLayout.createSequentialGroup()
-                .addContainerGap(83, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(50, 50, 50)
-                .addComponent(btnRecordStock, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+            .addGroup(panelRecordStockLayout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(btnStock)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(51, 51, 51)
-                .addComponent(panelRecordStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(panelDistribution, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(panelStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+        getContentPane().add(panelRecordStock);
+        panelRecordStock.setBounds(510, 140, 340, 500);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnDist.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDist.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dist.png"))); // NOI18N
+        btnDist.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDistMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnDist, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(121, 121, 121)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelStock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelDistribution, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelRecordStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(153, 153, 153))
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(btnDist)
+                .addContainerGap(154, Short.MAX_VALUE))
         );
 
-        getAccessibleContext().setAccessibleName("Menu");
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(870, 140, 338, 500);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnDRecord.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDRecord.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/data.png"))); // NOI18N
+        btnDRecord.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDRecordMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnDRecord, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(btnDRecord)
+                .addContainerGap(152, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(150, 140, 338, 498);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDRecordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDRecordMouseClicked
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                DataRecordUI form = new DataRecordUI();
+                form.setVisible(true);
+                dispose();
+            }
+        });
+    }//GEN-LAST:event_btnDRecordMouseClicked
+
+    private void btnStockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnStockMouseClicked
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                StockStatusUI form = new StockStatusUI();
+                form.setVisible(true);
+                dispose();
+            }
+        });
+    }//GEN-LAST:event_btnStockMouseClicked
+
+    private void btnDistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDistMouseClicked
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                DistributionUI form = new DistributionUI();
+                form.setVisible(true);
+                dispose();
+            }
+        });
+    }//GEN-LAST:event_btnDistMouseClicked
 
     /**
      * @param args the command line arguments
@@ -199,14 +194,12 @@ public class MainMenuUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDistribution;
-    private javax.swing.JButton btnRecordStock;
-    private javax.swing.JButton btnStockStatus;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel panelDistribution;
+    private javax.swing.JLabel btnDRecord;
+    private javax.swing.JLabel btnDist;
+    private javax.swing.JLabel btnStock;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel panelRecordStock;
-    private javax.swing.JPanel panelStock;
+    private javax.swing.JPanel panelRecordStock1;
     // End of variables declaration//GEN-END:variables
 }

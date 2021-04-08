@@ -30,6 +30,7 @@ public class LoginUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        CboxShowP = new javax.swing.JCheckBox();
         jLabel2 = new javax.swing.JLabel();
         lblUname = new javax.swing.JLabel();
         btn_login = new javax.swing.JLabel();
@@ -47,6 +48,15 @@ public class LoginUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(47, 62, 119));
         jPanel1.setLayout(null);
+
+        CboxShowP.setText("Show Password");
+        CboxShowP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CboxShowPActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CboxShowP);
+        CboxShowP.setBounds(150, 340, 200, 24);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/login.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -103,6 +113,12 @@ public class LoginUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_loginMouseClicked
 
+    private void CboxShowPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CboxShowPActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_CboxShowPActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -139,6 +155,7 @@ public class LoginUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox CboxShowP;
     private javax.swing.JLabel btn_login;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
