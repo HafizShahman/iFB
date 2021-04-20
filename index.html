@@ -1,42 +1,59 @@
 <!doctype html>
 <html>
 <head>
-  <title>Firebase Login</title>
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link rel="stylesheet" href="css/login-register.css">
 </head>
 <body>
-
-  <div id="login_div" class="main-div">
-    <h3>Firebase Web login Example</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
-
-    <button onclick="login()">Login to Account</button>
-  </div>
-
-  <div id="user_div" class="loggedin-div">
-    <h3>Welcome User</h3>
-    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
-    <button onclick="logout()">Logout</button>
-  </div>
-
-
-
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyCFX4sHwgKoVzpN0_4e8rlN6YI2Zrvs3Kg",
-    authDomain: "ifoodbank.firebaseapp.com",
-    databaseURL: "https://ifoodbank-default-rtdb.firebaseio.com",
-    projectId: "ifoodbank",
-    storageBucket: "ifoodbank.appspot.com",
-    messagingSenderId: "434292180953"
-    };
-    firebase.initializeApp(config);
-  </script>
-  <script src="js/index.js"></script>
-
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div>Site<span>Random</span></div>
+</div>
+<br>
+<div class="login">
+    <form class="form-register" name="f1" action="authentication.php" onsubmit="return validation()" method="POST">
+        <div class="form-title-row">
+            <h1>Login</h1>
+        </div>
+        <br>
+        <div class="form-row">
+            <label> <span>Email</span>
+                <input type="text" name="user" id="user" placeholder="enter email">
+            </label>
+        </div>
+        <div class="form-row">
+            <label> <span>Password</span>
+                <input type="password" name="pass" id="pass" placeholder="enter password">
+            </label>
+        </div>
+        <input type="submit" name="btn" value="Login">
+    </form>
+</div>
+// validation for empty field 
+<script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+        </script>
 </body>
 </html>
