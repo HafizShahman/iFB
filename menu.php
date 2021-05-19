@@ -4,26 +4,39 @@
 <title>Welcome</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/navbar.css">
-<script src="js/navbar.js"></script>
+    <link rel="stylesheet" href="css/reset.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header-8.css" />
 </head>
 <body>
-<div class="navbar">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li style="float:right">
-            <div class="dropdown">
-                <button class="dropbtn" onclick="myFunction()">
-                  <img src="image/user.png" width="25px">
-                <i class="fa fa-caret-down"></i> </button>
-                <div class="dropdown-content" id="myDropdown"> <a href="logout.php">Logout</a> </div>
-            </div>
-        </li>
-    </ul>
-</div>
-<center>
+    <!-- Header Start -->
+    <header class="site-header">
+      <div class="wrapper site-header__wrapper">
+        <div class="site-header__start">
+          <a href="#" class="brand">Brand</a>s
+        </div>
+        <div class="site-header__middle">
+          <nav class="nav">
+            <button class="nav__toggle" aria-expanded="false" type="button">
+              menu
+            </button>
+            <ul class="nav__wrapper">
+              <li class="nav__item"><a href="#">Home</a></li>
+              <li class="nav__item"><a href="#">About</a></li>
+              <li class="nav__item"><a href="#">Services</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="site-header__end">
+          <a href="#">Logout</a>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <script src="js/header-8.js"></script>
+	  
+	  <center>
 			<div>
 			<div class="container">
 				<div class="box">
@@ -34,7 +47,7 @@
 							<button>Record Stock</button>
 						</div>
 						<!--center box-->
-						<div class="box-cell box2">
+						<div class="box-cell box2" href="stock.php">
 							<img src="image/inventory1.png" alt="inventory">
 							<button>View Stock</button>
 						</div>
@@ -47,5 +60,5 @@
 			</div>
 			</div> 
 		</center>
-</body>
+  </body>
 </html>
