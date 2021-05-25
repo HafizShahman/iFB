@@ -33,20 +33,20 @@
             <div class="box">
                 <div class="box-row"> 
                     <!--left box-->
-                    <div class="box-cell box1"> <img src="image/update1.png" alt="update">
-                        <button>
+                    <div class="box-cell box1" href="addItemUI.php"> <img src="image/update1.png" alt="update">
+                        <button href="addItemUI.php">
                         <a href="addItemUI.php" class="btnmenu">Record Stock</a>
                         </button>
                     </div>
                     <!--center box-->
-                    <div class="box-cell box2" href="stock.php"> <img src="image/inventory1.png" alt="inventory">
-                        <button>
+                    <div class="box-cell box2" href="stockUI.php"> <img src="image/inventory1.png" alt="inventory">
+                        <button href="stockUI.php">
                         <a href="stockUI.php" class="btnmenu">View Stock</a>
                         </button>
                     </div>
                     <!--right box-->
-                    <div class="box-cell box3"> <img src="image/distributed.png" alt="distribution">
-                        <button>
+                    <div class="box-cell box3" href="distributionUI.php"> <img src="image/distributed.png" alt="distribution">
+                        <button href="distributionUI.php">
                         <a href="distributionUI.php" class="btnmenu">Distribution</a>
                         </button>
                     </div>

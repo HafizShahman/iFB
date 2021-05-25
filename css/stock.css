@@ -83,7 +83,6 @@ h1 span {
 }
 body {
     font-family: system-ui;
-    background: #F5F5F5;
     color: pink;
     text-align: center;
 }
@@ -107,13 +106,9 @@ li a {
 }
 ul {
     overflow: hidden;
-    list-style-type: none;
-    background-color: #ffe4e1;
 }
 li a:hover:not(.active) {
-    background-color: #FFF0F5;
 }
 li a.active {
     color: white;
-    background-color: #FFE4E1;
 }

@@ -1,3 +1,7 @@
+<?php
+INCLUDE_ONCE 'connection.php';
+$result = mysqli_query( $conn, "SELECT * FROM db_stock" );
+?>
 <!doctype html>
 <html>
 <head>
@@ -27,41 +31,43 @@
         <div class="site-header__end"> <a href="logout.php">Logout</a> </div>
     </div>
 </header>
-<!-- Header End --> 
+<!-- Header End -->
 <h1> STOCK LIST INTERFACE</h1>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<?php
+if ( mysqli_num_rows( $result ) > 0 ) {
+    ?>
 <table class="responstable">
     <tr>
-        <th width="12%">NO</th>
-        <th width="47%" data-th="Driver details">ITEM</th>
-        <th width="14%">QUANTITY</th>
-        <th width="27%">EXPIRED DATE</th>
+        <th width="250px">Food Name
+            </td>
+        <th width="100px">Barcode
+            </td>
+        <th width="100px">Quantity
+            </td>
+        <th width="100px">Expired date
+            </td>
     </tr>
+    <?php
+    $i = 0;
+    while ( $row = mysqli_fetch_array( $result ) ) {
+        ?>
     <tr>
-        <td>Steve</td>
-        <td>Foo</td>
-        <td>01/01/1978</td>
-        <td>Policyholder</td>
+        <td><?php echo $row["Food_Name"]; ?></td>
+        <td><?php echo $row["Barcode"]; ?></td>
+        <td><?php echo $row["Quantity"]; ?></td>
+        <td><?php echo $row["Date"]; ?></td>
     </tr>
-    <tr>
-        <td>Steffie</td>
-        <td>Foo</td>
-        <td>01/01/1978</td>
-        <td>Spouse</td>
-    </tr>
-    <tr>
-        <td>Stan</td>
-        <td>Foo</td>
-        <td>01/01/1994</td>
-        <td>Son</td>
-    </tr>
-    <tr>
-        <td>Stella</td>
-        <td>Foo</td>
-        <td>01/01/1992</td>
-        <td>Daughter</td>
-    </tr>
+    <?php
+    $i++;
+    }
+    ?>
 </table>
+<?php
+} else {
+    echo "No result found";
+}
+?>
 </body>
 </html>
