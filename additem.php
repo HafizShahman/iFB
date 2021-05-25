@@ -1,5 +1,7 @@
 <?php
 include( 'connection.php' );
+
+
 $sql = "INSERT INTO db_stock (Food_Name, Barcode, Quantity, Date)
 VALUES ('$foodname', '$barcode', '$quan', '$date')";
 

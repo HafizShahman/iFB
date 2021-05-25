@@ -1,0 +1,13 @@
+/* CSS Document */
+.btn {
+	width: 80px;
+	height: 25px;
+	border: hidden;
+	background-color: #81809A;
+	border-radius: 10px
+}
+
+.inputdata {
+	margin: 10px;
+}
+

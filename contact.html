@@ -3,8 +3,48 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<link rel="stylesheet" href="css/stt.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+<!-- This is code for overlay-->
+<div id="bar">
+<div id="overlay" onclick="off()" style="float:left">
+  <div id="nav" align="center">
+	  <ul>
+		<li><a href="index.html">Home</a></li>
+		<li style="color: #FFFFFF">Smartphone
+			<ul>
+				<li><a href="addItemUI.php">Add Stock</a></li>
+				<li><a href="stockUI.php">Stock List</a></li>
+				<li><a href="distributionUI.php">Distribution</a></li>
+			</ul>
+		</li>
+		<li><a href="contact us.html">Contact Us</a></li>
+	  </ul>
+        </div>
+</div>
+<div style="padding:10px">
+<div id="social" style="float:right" >
+<a class="icon"><i class="fa fa-id-badge fa-2x"></i></a>
+</div>
+
+  <i class="fa fa-bars fa-2x" aria-hidden="true" onclick="on()"></i>
+</div>
+
+
+
+</div>
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+<!-- End of overlay code-->
 </body>
 </html>
