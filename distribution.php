@@ -8,7 +8,8 @@ $currentTime = date( 'Y-m-d', strtotime( '+24 hours' ) );
 echo "<pre>";
 print_r($_POST);
 
-//$query1 = "INSERT INTO db_stock (Food_Name, Barcode, Quantity, Date)";
+
+$query1 = "UPDATE db_stock SET Quantity = Quantity - " . $_POST[ "quan" ][ $i ] . "WHERE Barcode =" . $_POST[ "barcode" ][ $i ] . "";
 
 
 

@@ -39,11 +39,11 @@
         <p>&nbsp;</p>
         <table class="responstable" id="data_table">
             <tr>
-				<th width="40%" class="inputdata">Staff Name</th>
-                <th width="40%" class="inputdata">Food Name</th>
-                <th width="30%" class="inputdata">Barcode</th>
+				<th width="30%" class="inputdata">Staff Name</th>
+                <th width="25%" class="inputdata">Food Name</th>
+                <th width="15%" class="inputdata">Barcode</th>
                 <th width="15%" class="inputdata">Quantity</th>
-                <th width="25%" class="inputdata">Expired date</th>
+                <th width="15%" class="inputdata">Expired date</th>
                 <th colspan="2" width="10%" class="inputdata"></th>
             </tr>
             <tr>
@@ -67,7 +67,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="5" align="center" class="inputdata">
+                <td colspan="6" align="center" class="inputdata">
                     <input type="submit" class="btn" name="submit" value="SUBMIT" onClick="submit">
                 </td>
             </tr>

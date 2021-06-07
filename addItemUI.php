@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>New Stock - iFoodBank</title>
-<script src="js/add.js"></script>
+
 <link rel="stylesheet" href="css/stock.css">
 <link rel="stylesheet" href="css/reset.min.css" />
 <link rel="stylesheet" href="css/style.css" />
@@ -36,7 +36,8 @@
     <form action="additem.php" method="post">
         <h1>Add New Data</h1>
         <p>&nbsp;</p>
-        <table class="responstable" id="data_table">
+		<script src="js/add.js"></script>
+        <table class="responstable" id="datatable">
             <tr>
                 <th width="40%" class="inputdata">Food Name</th>
                 <th width="30%" class="inputdata">Barcode</th>
@@ -46,19 +47,19 @@
             </tr>
             <tr>
                 <td class="inputdata" height="30px">
-                    <input type="text" id="foodname[]" name="foodname[]" value="" required style="width: 90%">
+                    <input type="text" id="foodname" name="foodname" value="" required style="width: 90%">
                 </td>
                 <td class="inputdata">
-                    <input type="text" id="barcode[]" name="barcode[]" value="" required style="width: 90%">
+                    <input type="text" id="barcode" name="barcode" value="" required style="width: 90%">
                 </td>
                 <td class="inputdata">
-                    <input type="text" id="quan[]" name="quan[]" value="" required style="width: 90%">
+                    <input type="text" id="quan" name="quan" value="" required style="width: 90%">
                 </td>
                 <td class="inputdata">
-                    <input type="date" id="date[]" name="date[]" value="" style="width: 90%">
+                    <input type="date" id="date" name="date" value="" style="width: 90%">
                 </td>
                 <td colspan="1" align="right">
-					<button type="button" class="btn add" id="addrow" onClick="addrow();">Add Row</button>
+					<input type="button" class="btn add" id="addrow" onClick="addrow();" value="Add Row">
 				</td>
             </tr>
             <tr>
