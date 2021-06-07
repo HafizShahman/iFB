@@ -1,6 +1,6 @@
 <?php
 INCLUDE 'connection.php';
-$query = "SELECT * FROM db_stock";
+$query = "SELECT * FROM db_report_in";
 $result = mysqli_query( $conn, $query );
 ?>
 <!doctype html>
@@ -23,8 +23,7 @@ $result = mysqli_query( $conn, $query );
         <div class="site-header__start"> <a href="menu.php" class="brand">iFoodBank</a> </div>
         <div class="site-header__middle">
             <nav class="nav">
-                <button class="nav__toggle" aria-expanded="false" type="button"> menu </button>
-                <ul class="nav__wrapper">
+                            <ul class="nav__wrapper">
                     <li class="nav__item"><a href="menu.php">Home</a></li>
                     <li class="nav__item"><a href="contact.html">Contact</a></li>
                 </ul>
@@ -44,7 +43,7 @@ $result = mysqli_query( $conn, $query );
             <th width="250px">Food Name </th>
             <th width="100px">Barcode </th>
             <th width="100px">Quantity </th>
-            <th width="100px">Expired date </th>
+            <th width="100px">Date Stock In</th>
         </tr>
         <?php
         $bil = 1;
@@ -59,7 +58,7 @@ $result = mysqli_query( $conn, $query );
             <td><?php echo $row["Food_Name"]; ?></td>
             <td><?php echo $row["Barcode"]; ?></td>
             <td><?php echo $row["Quantity"]; ?></td>
-            <td><?php echo $row["Date"]; ?></td>
+            <td><?php echo $row["DateIn"]; ?></td>
         </tr>
         <?php
         $bil++;
@@ -75,6 +74,7 @@ $result = mysqli_query( $conn, $query );
         }
         ?>
     </table>
+	<input type="button" onClick="window.print()" value="Print The Report"/>
 </center>
 </body>
 </html>

@@ -1,23 +1,30 @@
-<?php      
-    include('connection.php');  
-    $username = $_POST['user'];  
-    $password = $_POST['pass'];  
-      
-        //to prevent from mysqli injection  
-        $username = stripcslashes($username);  
-        $password = stripcslashes($password);  
-        $username = mysqli_real_escape_string($con, $username);  
-        $password = mysqli_real_escape_string($con, $password);  
-      
-        $sql = "select *from db_user where Email = '$username' and Password = '$password'";  
-        $result = mysqli_query($con, $sql);  
-        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $count = mysqli_num_rows($result);  
-          
-        if($count == 1){  
-          header('location: menu.php');
-        }  
-        else{  
-            echo "<h1> Login failed. Invalid username or password.</h1>";  
-        }     
-?>  
+<?php
+include( 'connection.php' );
+$username = $_REQUEST[ 'user' ];
+$password = $_REQUEST[ 'pass' ];
+
+$sql = "select * from db_user where Email = '$username' and Password = '$password'";
+$result = mysqli_query( $conn, $sql );
+$empty = mysqli_num_rows( $result );
+while ( $row = mysqli_fetch_assoc( $result ) ) {
+    $status = $row[ 'Status' ];
+}
+
+if ( $empty == 0 ) {
+    ?>
+<script>alert('Sorry. Username or Password is wrong!!')
+window.location='index.html'	
+</script>
+<?php
+} else if ( $status == "Admin" ) {
+    session_start();
+    $_SESSION[ 'sessionname' ] = "$username";
+    header( "Location: menu.php" );
+} else if ( $status == "staf" ) {
+    header( "Location: menu.php" );
+} else {
+    header( "Location: menu.php" );
+}
+
+$conn->close();
+?>

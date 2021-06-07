@@ -16,38 +16,8 @@ h1{
   	font-size: 65px;
 }
 
-
-.container .box{
-	width:1050px;
-	margin:160px;/*set tinggi container*/
-	display: table;
-	font-family: 'Nunito', sans-serif;
-	font-weight: 700;
-}
-
-.container .box .box-row{
-	display:table-row;
-}
-
-.container .box .box-cell{
-	display:table-cell;
-	width: 33%;
+.tbox {
 	padding: 50px;
-}
-
-.container .box .box-cell.box1 {
-	background:#7A7A7A;
-	text-align:center; 
-} 
-
-.container .box .box-cell.box2 { 
-	background:#696969; 
-	text-align:center;
-} 
-
-.container .box .box-cell.box3 { 
-	background:#4C4C4C; 
-	text-align:center; 
 }
 
 button{
