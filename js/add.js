@@ -20,3 +20,7 @@ function addrow() {
 function delete_row(no) {
     document.getElementById("row" + no + "").outerHTML = "";
 }
+
+function stocklist(){
+	window.location='stockUI.php';
+}

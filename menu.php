@@ -34,7 +34,7 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
             <nav class="nav">
                 <button class="nav__toggle" aria-expanded="false" type="button"> menu </button>
                 <ul class="nav__wrapper">
-                    <li class="nav__item"><a href="menu.php">Home</a></li>
+                    <li class="nav__item"><a href="menu.php"><img src="image/home.png" alt="homeimg"></a></li>
                     <li class="nav__item"><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -42,44 +42,54 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
         <div class="site-header__end"><b><?php echo $query_name?></b><a href="logout.php">Logout</a> </div>
     </div>
 </header>
-<!-- Header End -->
-	</br><br>
-
+<!-- Header End --> 
 <center>
-    <table>
+    
+<h3>Welcome to ifoodBank Akrab<br> <br><?php echo $query_name?></h3>
+    </br>
+    </br>
+    <table >
         <tr>
             <td class="tbox">
-                <div class="box-cell box1" href="addItemUI.php"> <img src="image/update1.png" alt="update">
-                    <button href="addItemUI.php">
-                    <a href="addItemUI.php" class="btnmenu">Record Stock</a>
-                    </button>
+                <div class="box-cell box1" href="addItemUI.php" class="aligncenter">
+                <img src="image/update1.png" alt="update">
+                <button href="addItemUI.php">
+                <a href="addItemUI.php" class="btnmenu">Record Stock</a>
+                </button>
                 </div>
             </td>
             <td> </td>
             <td class="tbox">
-                <div class="box-cell box3" href="distributionUI.php"> <img src="image/distributed.png" alt="distribution">
-                    <button href="distributionUI.php">
-                    <a href="distributionUI.php" class="btnmenu">Distribution</a>
-                    </button>
+                <div class="box-cell box2" href="stockUI.php" class="aligncenter">
+                <img src="image/inventory1.png" alt="inventory" >
+                <button href="stockUI.php">
+                <a href="stockUI.php" class="btnmenu">View Stock</a>
+                </button>
+                </div>
+            </td>
+            <td> </td>
+            <td class="tbox">
+                <div class="box-cell box3" href="distributionUI.php" class="aligncenter">
+                <img src="image/distributed.png" alt="distribution" >
+                <button href="distributionUI.php">
+                <a href="distributionUI.php" class="btnmenu">Distribution</a>
+                </button>
                 </div>
             </td>
         </tr>
         <tr>
+            <td></td>
+            <td></td>
             <td class="tbox">
-                <div class="box-cell box2" href="stockUI.php"> <img src="image/inventory1.png" alt="inventory">
-                    <button href="stockUI.php">
-                    <a href="stockUI.php" class="btnmenu">View Stock</a>
-                    </button>
+                <div class="box-cell box2" href="reportlist.php" class="aligncenter">
+                <img src="image/rwport_2-removebg-preview.png" alt="inventory" width="200px" href="reportlist.php">
+                <button href="reportlist.php">
+                <a href="reportUI.php" class="btnmenu">Report</a>
+                </button>
                 </div>
             </td>
             <td></td>
-            <td class="tbox">
-                <div class="box-cell box2" href="reportlist.php"> <img src="image/inventory1.png" alt="inventory">
-                    <button href="reportlist.php">
-                    <a href="reportlist.php" class="btnmenu">Report</a>
-                    </button>
-                </div>
-            </td>
+            <td></td>
         </tr>
     </table>
 </center>

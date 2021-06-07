@@ -6,19 +6,14 @@ date_default_timezone_set( 'Asia/Kuala_Lumpur' ); // change according timezone
 $currentTime = date( 'Y-m-d', strtotime( '+24 hours' ) );
 
 echo "<pre>";
-print_r($_POST);
+print_r( $_POST );
 
-
-$query1 = "UPDATE db_stock SET Quantity = Quantity - " . $_POST[ "quan" ][ $i ] . "WHERE Barcode =" . $_POST[ "barcode" ][ $i ] . "";
-
-
-
-
-
-
-
-
-
+if ( $barcode = $_POST[ 'barcode' ] != '' ) {
+    for ( $i = 0; $i < $barcode; $i++){
+		$query1 = "UPDATE db_stock SET Quantity = Quantity - " . $_POST[ "quan" ][ $i ] . "WHERE Barcode =" . $_POST[ "barcode" ][ $i ] . ";";
+	}
+        echo $finalquery = mysqli_query($conn, $query1);
+}
 
 
 /**if ( !empty( $_POST ) ) {
