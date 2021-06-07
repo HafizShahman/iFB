@@ -57,7 +57,7 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
                 <th width="15%" class="inputdata">Barcode</th>
                 <th width="15%" class="inputdata">Quantity</th>
                 <th width="15%" class="inputdata">Expired date</th>
-                <th colspan="2" width="10%" class="inputdata"></th>
+                <th width="10%" class="inputdata"></th>
             </tr>
             <tr>
 				<td class="inputdata" height="30px">
@@ -75,7 +75,7 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
                 <td class="inputdata">
                     <input type="date" id="date" name="date" value="" style="width: 90%">
                 </td>
-                <td colspan="4" align="right">
+                <td colspan="5" align="right">
                     <input type="button" class="btn add" onclick="add_row();" value="Add Row">
                 </td>
             </tr>
