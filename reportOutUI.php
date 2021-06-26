@@ -1,8 +1,5 @@
 <?php
 include 'connection.php';
-$query = "SELECT * FROM db_report_in";
-$result = mysqli_query( $conn, $query );
-
 include 'session.php';
 
 $sessionname = $_SESSION[ 'sessionname' ];
@@ -14,7 +11,14 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
     $status = $row_session[ 'Status' ];
 }
 
+$query = "SELECT * FROM db_report_out";
+$result = mysqli_query( $conn, $query );
+
+
 ?>
+<script type="text/javascript">
+	
+</script>
 <!doctype html>
 <html>
 <head>
@@ -49,36 +53,20 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
 </br>
 <br>
 <center>
-    <select class="">
-        <option value="Select" name="select">SELECT</option>
-        <option value="Year" name="year">Year</option>
-        <option value="January" name="1">January</option>
-        <option value="February" name="2">February</option>
-        <option value="March" name="3">March</option>
-        <option value="April" name="4">April</option>
-        <option value="May" name="5">May</option>
-        <option value="June" name="6">June</option>
-        <option value="July" name="7">July</option>
-        <option value="August" name="8">August</option>
-        <option value="September" name="9">September</option>
-        <option value="October" name="10">October</option>
-        <option value="November" name="11">November</option>
-        <option value="December" name="12">December</option>
-    </select>
-	<button onClick="search()" class="btn">SEARCH</button>
+    <h1>Report Data Out</h1>
+    <br>
     <table class="responstable">
         <tr>
             <th width="10px">No</th>
+			<th width="250px">Staff Name </th>
             <th width="250px">Food Name </th>
             <th width="100px">Barcode </th>
-            <th width="100px">Quantity </th>
-            <th width="100px">Expired Date </th>
-            <th width="100px">Record Date In </th>
+            <th width="90px">Quantity </th>
+            <th width="120px">Record Date Out </th>
         </tr>
         <?php
         $bil = 1;
-        echo "<br><br><br> Total In List : ";
-        echo $empty = mysqli_num_rows( $result );
+        
 
         if ( mysqli_num_rows( $result ) > 0 ) {
             $i = 0;
@@ -86,27 +74,20 @@ while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
                 ?>
         <tr>
             <td><?php echo $bil; ?></td>
+            <td><?php echo $row["Staff_Name"]; ?></td>
             <td><?php echo $row["Food_Name"]; ?></td>
             <td><?php echo $row["Barcode"]; ?></td>
             <td><?php echo $row["Quantity"]; ?></td>
-            <td><?php echo $row["ExpDate"]; ?></td>
-            <td><?php echo $row["DateIn"]; ?></td>
+            <td><?php echo $row["DateOut"]; ?></td>
         </tr>
         <?php
         $bil++;
         $i++;
         }
-        if ( $empty == 0 ) {
-            ?>
-        <tr>
-            <td colspan="4" align="center">Tiada Rekod</td>
-        </tr>
-        <?php
-        }
         }
         ?>
     </table>
-    <button type="button" onClick="window.print()" class="btn" >Print The Report</button>
+    <button type="button" onClick="window.print()"  class="butang">Print The Report</button>
 </center>
 </body>
 </html>
