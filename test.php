@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>New Stock - iFoodBank</title>
+<title>test</title>
 <link rel="stylesheet" href="css/stock.css">
 <link rel="stylesheet" href="css/reset.min.css" />
 <link rel="stylesheet" href="css/style.css" />
