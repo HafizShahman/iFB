@@ -16,9 +16,10 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <center>
-    <div id="content"> </div>
+
+    <h2>Add New Data</h2>
     <form action="additem.php" method="post">
-        <h2 >Add New Data</h2>
+        
         <p>&nbsp;</p>
         <script src="js/add.js"></script>
         <table class="responstable" id="datatable">
