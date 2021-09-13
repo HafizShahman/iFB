@@ -15,20 +15,8 @@ $result = mysqli_query( $conn, $query );
 
 <link rel="icon" href="image/logo.png">
 </head>
-<?php
-
-include 'session.php';
-$sessionname = $_SESSION[ 'sessionname' ];
-$query_session = "SELECT * from db_user WHERE Email='$sessionname'";
-$result_session = mysqli_query( $conn, $query_session );
-while ( $row_session = mysqli_fetch_assoc( $result_session ) ) {
-    $query_name = $row_session[ 'Name' ];
-    $status = $row_session[ 'Status' ];
-}
-
-?>
 <body>
-<?php include ("head.html"); ?>
+<?php include ("head.php"); ?>
 <h1> STOCK LIST INTERFACE</h1>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
